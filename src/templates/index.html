@@ -43,7 +43,7 @@
                 <a href="#">{{ cat }}</a>
                 {% endfor %}
               </div>
-              <a href="post.html">
+              <a href="#">
                 <h2 class="h4">{{ obj.title }}</h2>
               </a>
             </header>
@@ -117,7 +117,8 @@
       </div>
       <div class="col-md-8">
         <div class="form-holder">
-          <form action="#">
+          <form action="#" method="POST">
+          {% csrf_token %}
             <div class="form-group">
               <input type="email" name="email" id="email" placeholder="Type your email address">
               <button type="submit" class="submit">Subscribe</button>
